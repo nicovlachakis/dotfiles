@@ -11,7 +11,7 @@ alias please='sudo'
 alias fucking='sudo'
 alias ffs='sudo !!'
 
-alias tothelab="cd /mnt/c/Users/Gregory/Desktop/projects"
+alias tothelab="cd /labfolder"
 
 # prompt
 case "$TERM" in
