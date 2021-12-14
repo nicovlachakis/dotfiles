@@ -13,6 +13,9 @@ alias ffs='sudo !!'
 
 alias tothelab="cd /labfolder"
 
+# env variables
+export ANSIBLE_NOCOWS=1
+
 # prompt
 case "$TERM" in
 xterm*|rxvt*)
