@@ -1,5 +1,7 @@
 ## command aliases
 
+GNS3_SERVER="gns3"
+
 alias ll='ls -lh'
 alias la='ls -lha'
 alias l='ls -CF'
@@ -12,9 +14,15 @@ alias fucking='sudo'
 alias ffs='sudo !!'
 
 alias tothelab="cd /mnt/c/Users/Gregory/Desktop/Projects"
-alias lab="telnet 10.30.60.25 "
 
-# pip install pipeplot first
+# quickly connect to lab device with lab <devname>
+function lab() {
+    PORT=$(curl -sX GET http://${GNS3_SERVER}/v2/projects | jq '.[] | select(.status=="opened") | .project_id' | \
+    xargs -I PID curl -sX GET http://${GNS3_SERVER}/v2/projects/PID/nodes | jq --arg node $1 '.[] | select(.name==$node) | .console' )
+
+    telnet ${GNS3_SERVER} $PORT
+}
+
 alias rackpower="while true; do curl -sX GET http://10.30.10.81/status | jq .meters[0].power; sleep 1; done | pipeplot --min 150 --max 220 --direction right"
 
 ## env vars
