@@ -12,6 +12,10 @@ alias fucking='sudo'
 alias ffs='sudo !!'
 
 alias tothelab="cd /mnt/c/Users/Gregory/Desktop/Projects"
+alias lab="telnet 10.30.60.25 "
+
+# pip install pipeplot first
+alias rackpower="while true; do curl -sX GET http://10.30.10.81/status | jq .meters[0].power; sleep 1; done | pipeplot --min 150 --max 220 --direction right"
 
 ## env vars
 # disable ps1 change by python venv
