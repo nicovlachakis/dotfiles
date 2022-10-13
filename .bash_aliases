@@ -13,6 +13,9 @@ alias please='sudo'
 alias fucking='sudo'
 alias ffs='sudo !!'
 
+alias activate='source .venv/bin/activate'
+alias newvenv='python3 -m venv .venv'
+
 alias tothelab="cd /mnt/c/Users/Gregory/Desktop/Projects"
 
 # quickly connect to lab device with lab <devname>
