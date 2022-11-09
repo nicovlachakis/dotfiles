@@ -1,6 +1,7 @@
 ## command aliases
 
 GNS3_SERVER="gns3"
+NOTESDIR=""
 
 alias ll='ls -lh'
 alias la='ls -lha'
@@ -17,6 +18,7 @@ alias activate='source .venv/bin/activate'
 alias newvenv='python3 -m venv .venv'
 
 alias tothelab="cd /mnt/c/Users/Gregory/Desktop/Projects"
+alias syncnotes="git -C ${NOTESDIR} status; git -C ${NOTESDIR} commit -am 'sync'; git -C ${NOTESDIR} push"
 
 # quickly connect to lab device with lab <devname>
 function lab() {
