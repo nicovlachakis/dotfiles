@@ -18,7 +18,7 @@ alias activate='source .venv/bin/activate'
 alias newvenv='python3 -m venv .venv'
 
 alias tothelab="cd /mnt/c/Users/Gregory/Desktop/Projects"
-alias syncnotes="git -C ${NOTESDIR} status; git -C ${NOTESDIR} commit -am 'sync'; git -C ${NOTESDIR} push"
+alias syncnotes="git -C ${NOTESDIR} pull; git -C ${NOTESDIR} status; git -C ${NOTESDIR} add .; git -C ${NOTESDIR} commit -am 'sync'; git -C ${NOTESDIR} push"
 
 # quickly connect to lab device with lab <devname>
 function lab() {
