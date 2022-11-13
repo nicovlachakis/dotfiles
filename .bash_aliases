@@ -33,6 +33,7 @@ function lab() {
 alias rackpower="while true; do curl -sX GET http://10.30.10.81/status | jq .meters[0].power; sleep 1; done | pipeplot --min 150 --max 220 --direction right"
 
 ## env vars
+export EDITOR="/usr/bin/nano"
 # disable ps1 change by python venv
 export ANSIBLE_NOCOWS=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
