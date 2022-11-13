@@ -3,15 +3,17 @@
 GNS3_SERVER="gns3"
 NOTESDIR=""
 
-alias ll='ls -lh'
-alias la='ls -lha'
-alias l='ls -CF'
-alias dd='dd status=progress'
-alias _='sudo'
-alias _i='sudo -i'
+# Aliases can use sudo
+alias sudo="sudo "
 
-alias please='sudo'
-alias fucking='sudo'
+alias ll="ls -lhF"
+alias la="ls -alhF"
+alias l='ls -CF'
+alias du="du -sh"
+alias free="free -h"
+alias tree="tree -pug"
+alias dd='dd status=progress'
+
 alias ffs='sudo !!'
 
 alias activate='source .venv/bin/activate'
