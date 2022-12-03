@@ -34,6 +34,8 @@ alias rackpower="while true; do curl -sX GET http://10.30.10.81/status | jq .met
 
 ## env vars
 export EDITOR="/usr/bin/nano"
+# for python packages installed with --user
+export PATH="$PATH:~/.local/bin"
 # disable ps1 change by python venv
 export ANSIBLE_NOCOWS=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
