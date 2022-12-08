@@ -30,7 +30,7 @@ function lab() {
     telnet ${GNS3_SERVER} $PORT
 }
 
-alias rackpower="while true; do curl -sX GET http://10.30.10.81/status | jq .meters[0].power; sleep 1; done | pipeplot --min 150 --max 220 --direction right"
+alias rackpower="while true; do curl -sX GET http://10.30.180.21/status | jq .meters[0].power; sleep 1; done | pipeplot --min 50 --max 250 --direction right"
 
 ## env vars
 export EDITOR="/usr/bin/nano"
